@@ -1,10 +1,20 @@
 # ooswsys light core ANSI89
 
-Small educational object-oriented model in ANSI C89/C90.
+Tiny object-oriented programming system for ANSI C89/C90.
 
-This repository is meant to show the core idea only: how a tiny object system can be built in plain C with objects, class descriptors, constructors, destructors, inheritance-like base/derived layout, and virtual-method-style function pointers.
+This is an educational tutorial project about object-oriented programming in C. It shows how a tiny object system can be built in plain C with objects, class descriptors, constructors, destructors, inheritance-like base/derived layout, and virtual-method-style function pointers.
 
 The project intentionally avoids generator code, metadata tables, datatype experiments, diagrams, and larger framework features. Those belong in the later full repository.
+
+## What You Will Learn
+
+- How to model objects and classes in C89/C90.
+- How to write constructor and destructor functions in C.
+- How to represent inheritance-like behavior with struct layout.
+- How to use function pointers as virtual methods.
+- How one small OOP/OOM pattern can be repeated for multiple classes.
+
+Search terms: OOP in C, object-oriented C, ANSI C object system, C89 OOP, C90 OOP, virtual methods in C, constructors and destructors in C.
 
 ## What Is Included
 
@@ -51,6 +61,16 @@ make run
 ```
 
 The demo prints constructor order, object sizes, member values, virtual method output, and destructor order.
+
+## Tutorial Path
+
+Start with the files in this order:
+
+1. `core/inc/object_.h`: base object and class descriptor.
+2. `core/src/object_.c`: `new_`, `delete_`, and base lifecycle.
+3. `app/inc/object_a1.h` and `app/src/object_a1.c`: first example class.
+4. `app/inc/object_b1.h` and `app/src/object_b1.c`: second example class with different fields.
+5. `app/main.c`: runnable demonstration.
 
 ## Core Ideas
 
