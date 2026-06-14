@@ -10,8 +10,8 @@
 
 
 
-static void objectA1Ctor ( struct Object_          * const object_,
-                           struct CtorParams const * const args ) {
+static void objectA1Ctor ( struct Object_           * const object_,
+                           struct CtorParams  const * const args ) {
 
 
           struct ObjectA1 * const obj = ( struct ObjectA1 * ) object_;

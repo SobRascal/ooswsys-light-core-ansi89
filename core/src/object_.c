@@ -7,7 +7,7 @@
 
 
 struct Object_ * new_ ( struct ClassObject const * const classObject,
-                        struct CtorParams const  * const args ) {
+                        struct CtorParams  const * const args ) {
 
 
           struct Object_ * object_;
@@ -73,8 +73,8 @@ void delete_( struct Object_ * const object_ ) {
           }
 
 
-static void objectCtor ( struct Object_          * const object_,
-                         struct CtorParams const * const args ) {
+static void objectCtor ( struct Object_           * const object_,
+                         struct CtorParams  const * const args ) {
 
 
           struct ObjectCtorParams const * const _args =

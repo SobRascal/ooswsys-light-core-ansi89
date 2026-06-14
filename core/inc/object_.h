@@ -56,8 +56,8 @@ struct ClassObject {
           size_t size_;
 
 
-          void ( * ctor ) ( struct Object_          * const object_,
-                            struct CtorParams const * const args );
+          void ( * ctor ) ( struct Object_           * const object_,
+                            struct CtorParams  const * const args );
 
 
           void ( * dtor ) ( struct ClassObject const * const classObject,
@@ -69,7 +69,7 @@ struct ClassObject {
 
 
 extern struct Object_ * new_ ( struct ClassObject const * const classObject,
-                               struct CtorParams const  * const args );
+                               struct CtorParams  const * const args );
 
 
 
