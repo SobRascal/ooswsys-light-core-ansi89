@@ -4,6 +4,8 @@ Tiny object-oriented programming system for ANSI C89/C90.
 
 This is an educational tutorial project about object-oriented programming in C. It shows how a tiny object system can be built in plain C with objects, class descriptors, constructors, destructors, inheritance-like base/derived layout, and virtual-method-style function pointers.
 
+Current revision: `1.2` (`2026-06-14`).
+
 The project intentionally avoids generator code, metadata tables, datatype experiments, diagrams, and larger framework features. Those belong in the later full repository.
 
 ## What You Will Learn
