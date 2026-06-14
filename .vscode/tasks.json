@@ -1,0 +1,59 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build debug (make)",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "all"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc",
+            "detail": "Build through the project Makefile."
+        },
+        {
+            "label": "build debug (gcc c89)",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-Wcast-qual",
+                "-Wwrite-strings",
+                "-ansi",
+                "-pedantic",
+                "-I",
+                ".",
+                "app/main.c",
+                "core/src/object_.c",
+                "app/src/object_a1.c",
+                "app/src/object_b1.c",
+                "-o",
+                "obj/Debug/ooswsys_light_core.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "problemMatcher": "$gcc",
+            "detail": "Direct strict ANSI/ISO C89/C90 GCC build."
+        },
+        {
+            "label": "run debug executable",
+            "type": "shell",
+            "command": "${workspaceFolder}/obj/Debug/ooswsys_light_core.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": "build debug (make)",
+            "problemMatcher": []
+        }
+    ]
+}

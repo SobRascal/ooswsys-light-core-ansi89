@@ -1,0 +1,19 @@
+{
+    "c-cpp-flylint.enable": false,
+    "c-cpp-flylint.clang.enable": false,
+    "c-cpp-flylint.cppcheck.enable": false,
+    "c-cpp-flylint.flexelint.enable": false,
+    "files.associations": {
+        "*.h": "c"
+    },
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true
+    },
+    "search.exclude": {
+        "**/bin": true,
+        "**/obj": true,
+        "**/*.exe": true,
+        "**/*.o": true
+    }
+}
