@@ -5,7 +5,7 @@ TARGET = $(OBJDIR)/ooswsys_light_core.exe
 SOURCES = app/main.c core/src/object_.c app/src/object_a1.c app/src/object_b1.c
 HEADERS = core/inc/object_.h app/inc/object_a1.h app/inc/object_b1.h
 
-.PHONY: all run clean
+.PHONY: all run clean rebuild
 
 all: $(TARGET)
 
@@ -18,3 +18,5 @@ run: $(TARGET)
 
 clean:
 	$(RM) $(TARGET)
+
+rebuild: clean all

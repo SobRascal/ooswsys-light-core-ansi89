@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build debug (make)",
+            "label": "make: build",
             "type": "shell",
             "command": "make",
             "args": [
@@ -16,44 +16,47 @@
                 "isDefault": true
             },
             "problemMatcher": "$gcc",
-            "detail": "Build through the project Makefile."
+            "detail": "Run make all."
         },
         {
-            "label": "build debug (gcc c89)",
+            "label": "make: clean",
             "type": "shell",
-            "command": "gcc",
+            "command": "make",
             "args": [
-                "-Wall",
-                "-Wextra",
-                "-Wcast-qual",
-                "-Wwrite-strings",
-                "-ansi",
-                "-pedantic",
-                "-I",
-                ".",
-                "app/main.c",
-                "core/src/object_.c",
-                "app/src/object_a1.c",
-                "app/src/object_b1.c",
-                "-o",
-                "obj/Debug/ooswsys_light_core.exe"
+                "clean"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "detail": "Run make clean."
+        },
+        {
+            "label": "make: rebuild",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "rebuild"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
             },
             "group": "build",
             "problemMatcher": "$gcc",
-            "detail": "Direct strict ANSI/ISO C89/C90 GCC build."
+            "detail": "Run make rebuild."
         },
         {
-            "label": "run debug executable",
+            "label": "make: run",
             "type": "shell",
-            "command": "${workspaceFolder}/obj/Debug/ooswsys_light_core.exe",
+            "command": "make",
+            "args": [
+                "run"
+            ],
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "dependsOn": "build debug (make)",
-            "problemMatcher": []
+            "problemMatcher": "$gcc",
+            "detail": "Run make run."
         }
     ]
 }
